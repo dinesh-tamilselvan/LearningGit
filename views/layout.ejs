@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" " href=" css/layout.css">
+    <%- style %>
+</head>
+
+<body>
+    <%-include('_header'); %>
+        <!--this is partials-->
+
+        <%- body %>
+            <!--
+            body will get filled by the  appropriate router action file call
+            
+        -->
+
+            <%-include('_footer'); %>
+
+</body>
+<!--
+    "partials" help us to put the variable parts of the web page in a separate
+    file and call it(kind of) in the nmain ejs file 
+    e.g. header and footer of the web page should be always there and
+    the main page content is keep on changing,
+    so the main page content which is variable will be in a separate file and will be
+    called (kind of).
+
+    "layout" is the container(skeleton structure) for the webpage
+-->
+
+</html>
